@@ -51,7 +51,9 @@ $(document).keypress(function(event) {
 
 const submitGuess = (dollarsOff, isLastItem) => {
   yodel.play();
-  moveClimber();
+  if (dollarsOff) {
+    moveClimber();
+  }
   setTimeout(function() {
     stopClimber();
     if (isLastItem) { // check for win
