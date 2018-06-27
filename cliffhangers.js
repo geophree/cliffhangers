@@ -7,6 +7,10 @@ win.setAttribute('src', 'win.mp3');
 const theme = document.createElement('audio');
 theme.setAttribute('src', 'theme.mp3');
 
+theme.addEventListener('ended', function() {
+  this.play();
+}, false);
+
 let themePlaying = false;
 let movement;
 
