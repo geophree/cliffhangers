@@ -103,7 +103,18 @@ const moveClimber = () => {
   if (parseFloat(top) < 58) { // moved too far! fail.
     setTimeout(() => {
       stopClimber();
+      fall();
       fail.play();
     }, 1000);
   }
+};
+
+const fall = () => {
+  const $climber = $('.climber');
+  $climber.animate({ 
+    top: `800px`
+  }, 500, 'linear');
+  $climber.css({
+    'transform':'rotate(180deg)'
+  });
 };
