@@ -117,4 +117,7 @@ const fall = () => {
   $climber.css({
     'transform':'rotate(180deg)'
   });
+  setTimeout(function() {
+    $climber.remove();
+  }, 500);
 };
