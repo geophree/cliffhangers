@@ -1,11 +1,11 @@
 const yodel = document.createElement('audio');
-yodel.setAttribute('src', 'yodel.mp3');
+yodel.setAttribute('src', 'assets/sounds/yodel.mp3');
 const fail = document.createElement('audio');
-fail.setAttribute('src', 'fail.mp3');
+fail.setAttribute('src', 'assets/sounds/fail.mp3');
 const win = document.createElement('audio');
-win.setAttribute('src', 'win.mp3');
+win.setAttribute('src', 'assets/sounds/win.mp3');
 const theme = document.createElement('audio');
-theme.setAttribute('src', 'theme.mp3');
+theme.setAttribute('src', 'assets/sounds/theme.mp3');
 
 theme.addEventListener('ended', function() {
   this.play();
@@ -54,11 +54,14 @@ $(document).keypress(function(event) {
 });
 
 const submitGuess = (dollarsOff, isLastItem) => {
-  yodel.play();
   if (dollarsOff) {
-    moveClimber();
+    yodel.play();
+    moveClimber(); // start moving immediately
+  } else {
+    win.play();
   }
-  setTimeout(function() {
+
+  setTimeout(function() { // after the correct number of steps moved, stop
     stopClimber();
     if (isLastItem) { // check for win
       const top = $('.climber').css('top');
@@ -71,6 +74,8 @@ const submitGuess = (dollarsOff, isLastItem) => {
       }
     }
   }, dollarsOff * 1000);
+
+  // Move one step after every second until stopped
   movement = setInterval(moveClimber, 1000);
 };
 
