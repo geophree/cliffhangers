@@ -16,9 +16,18 @@
     left: 224px;
 }
 
+.controls {
+    width: 1080px;
+    margin: 0 auto;
+}
+
 .controls div {
     margin: 5px;
-    margin-right: 10px;
+    margin-right: 20px;
+}
+
+.controls div:last-child {
+    margin-right: 0;
 }
 
 .controls input {
