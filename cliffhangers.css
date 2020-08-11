@@ -1,0 +1,35 @@
+.bg {
+    height: 693px;
+    width: 1160px;
+    background-image: url('assets/images/Cliffhangers.png');
+    background-size:100%;
+    margin: 0 auto;
+}
+
+.climber {
+    background-image: url('assets/images/Cliffhanger.png');
+    height: 170px;
+    width: 88px;
+    background-size: 100%;
+    position: relative;
+    top: 501px;
+    left: 224px;
+}
+
+.controls {
+    width: 1088px;
+    margin: 0 auto;
+}
+
+.controls div {
+    margin: 5px;
+    margin-right: 20px;
+}
+
+.controls div:last-child {
+    margin-right: 0;
+}
+
+.controls input {
+    margin-top: 10px;
+}
