@@ -14,28 +14,25 @@ theme.addEventListener('ended', function() {
 let themePlaying = false;
 let movement;
 
+/* TODO: Set the actual prices of the items here */
+const PRICES = [26, 39, 48];
+
 /* Input button listeners */
 $('#submitFirst').click(() => {
   const input = $('#firstPrice').val();
-  /* TODO: Set the actual price of the first item */
-  const actualPrice = 10;
-  const dollarsOff = Math.abs(actualPrice - parseInt(input));
+  const dollarsOff = Math.abs(PRICES[0] - parseInt(input));
   submitGuess(dollarsOff);
 });
 
 $('#submitSecond').click(() => {
   const input = $('#secondPrice').val();
-  /* TODO: Set the actual price of the second item */
-  const actualPrice = 10;
-  const dollarsOff = Math.abs(actualPrice - parseInt(input));
+  const dollarsOff = Math.abs(PRICES[1] - parseInt(input));
   submitGuess(dollarsOff);
 });
 
 $('#submitThird').click(() => {
   const input = $('#thirdPrice').val();
-  /* TODO: Set the actual price of the third item */
-  const actualPrice = 10;
-  const dollarsOff = Math.abs(actualPrice - parseInt(input));
+  const dollarsOff = Math.abs(PRICES[2] - parseInt(input));
   submitGuess(dollarsOff, true);
 });
 
