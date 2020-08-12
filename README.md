@@ -1,4 +1,4 @@
-# cliffhangers-jquery
+# Cliff Hangers
 To play a game locally, clone this repo. Update cliffhangers.js to have the actual price of the 3 prizes up for bid.
 
 Prices and guesses should be whole numbers.
